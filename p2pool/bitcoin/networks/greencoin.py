@@ -14,7 +14,7 @@ RPC_CHECK = defer.inlineCallbacks(lambda bitcoind: defer.returnValue(
             'greencoinaddress' in (yield bitcoind.rpc_help()) and
             not (yield bitcoind.rpc_getinfo())['testnet']
         ))
-SUBSIDY_FUNC = lambda height: __import__('einsteinium_subsidy').GetBlockBaseValue(height),
+SUBSIDY_FUNC = lambda height: __import__('gre_subsidy').GetBlockBaseValue(height),
 POW_FUNC = lambda data: pack.IntType(256).unpack(__import__('ltc_scrypt').getPoWHash(data))
 BLOCK_PERIOD = 63 # s
 SYMBOL = 'GRE'

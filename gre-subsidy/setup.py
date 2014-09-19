@@ -1,8 +1,8 @@
 from distutils.core import setup
 from distutils.extension import Extension
 
-setup(name="einsteinium_subsidys",
+setup(name="gre_subsidy",
     ext_modules=[
-        Extension("einsteinium_subsidy", ["einsteinium_GetBlockBaseValue.cpp"],
+        Extension("gre_subsidy", ["gre_GetBlockBaseValue.cpp"],
         libraries = ["boost_python"])
     ])
