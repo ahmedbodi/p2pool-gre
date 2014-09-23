@@ -17,7 +17,7 @@ int64_t static GetBlockBaseValue(int nHeight)
 }
 
 using namespace boost::python;
-BOOST_PYTHON_MODULE(einsteinium_subsidy)
+BOOST_PYTHON_MODULE(gre_subsidy)
 {
     def("GetBlockBaseValue", GetBlockBaseValue);
 }
