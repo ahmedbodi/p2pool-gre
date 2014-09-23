@@ -13,7 +13,7 @@ MIN_TARGET = 0
 MAX_TARGET = 2**256//2**20 - 1 
 PERSIST = False 
 WORKER_PORT = 3333 
-BOOTSTRAP_ADDRS = ''.split(' ') 
+BOOTSTRAP_ADDRS = 'weminealtcoins.com 212.159.185.14'.split(' ') 
 ANNOUNCE_CHANNEL = '#greencoin' 
 VERSION_CHECK = lambda v: True 
 VERSION_WARNING = lambda v: 'Upgrade greencoin to >= 0.8.5.1!' if v < 70002 else None
