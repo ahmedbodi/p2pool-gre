@@ -90,6 +90,8 @@ class WorkerBridge(worker_interface.WorkerBridge):
             if bb is not None and bb['previous_block'] == t['previous_block'] and self.node.net.PARENT.POW_FUNC(bitcoin_data.block_header_type.pack(bb)) <= t['bits'].target:
                 print 'Skipping from block %x to block %x!' % (bb['previous_block'],
                     bitcoin_data.hash256(bitcoin_data.block_header_type.pack(bb)))
+                    print(self.node.bitcoind_work.value['height'])
+                    print(self.node.net.PARENT.SUBSIDY_FUNC(self.node.bitcoind_work.value['height']))
                 t = dict(
                     version=bb['version'],
                     previous_block=bitcoin_data.hash256(bitcoin_data.block_header_type.pack(bb)),
